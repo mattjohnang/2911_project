@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+
+<main role="main" class="container">
+    <div class="starter-template">
+
+      <a href='/'>Home</a> | 
+
+        
+
+        <!-- Show 'Logout' and user name if authenticated. -->
+        <%if (reqInfo.authenticated) { %>
+         <a href='/User/My_Reviews'>My Reviews</a>
+        
+        | <a href='/User/Profile'>Profile</a> |
+
+        <a href='/User/Logout'>Logout</a> [<%= reqInfo.username %>]  |
+
+        <a href='/Home/Game'>MASTERMIND MY GUY</a>
+
+
+        
+
+        <!-- 'else' must be in separate section with curly brackets to work. -->
+        <% } else { %>
+
+          <a href='/User/Register'>Register</a> | 
+
+          <a href='/User/Login'>Login</a>
+          
+        <% } %> 
+    
+
+        <!-- Child view goes here.-->
+        <%- body %>
+
+
+
+    </div>
+</main>
+
+</body>
+</html>

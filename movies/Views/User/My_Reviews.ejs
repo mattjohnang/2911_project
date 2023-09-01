@@ -1,0 +1,49 @@
+<% layout('../layouts/mainlayout.ejs') -%>
+
+  <h3>MY REVIEWS</h3>  
+  
+<% for(var i=0; i < reviews.length; i++) { %>
+  <% if (reviews[i].username == reqInfo.username) { %>
+<table>   
+
+  <tr>
+    <td>
+      <h2> <%= reviews[i].movieName %></h2>
+
+    </td>
+
+  </tr>
+
+  <tr>
+    <td>
+      <b>Stars: <%= reviews[i].stars %> </b>
+    </td>
+
+    <td>
+      <b><a href = '/User/EditReview?_id=<%= reviews[i]._id %>'>Edit</a> | <a href='/User/DeleteReview?_id=<%= reviews[i]._id %>'>Delete</a>
+    </td>
+
+  </tr>
+
+  <tr>
+
+    <td>
+      <b>Date written: </b><%= reviews[i].date %>
+    </td>
+   
+  </tr>
+
+  <tr>
+
+ 
+    <td>
+      <b>Review:</b> <%= reviews[i].review %>
+    </td>
+
+
+  </tr>
+
+</table>
+<% } %>
+
+<% } %>

@@ -1,0 +1,28 @@
+button {
+    margin: 5px;
+    border: solid 3px grey;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: 200;
+    color: white;
+  }
+
+#btn-start {
+    width: 100px;
+    border: none;
+    margin: 10px 0px;
+    padding: 10px 0px;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    font-size: 1em;
+    margin-left: 100px;
+  }
+
+  #colorChangeTest button {
+    border-radius: 20px;
+    display: inline;
+    padding: 20px;
+    margin: 5px;
+    color: black;
+}

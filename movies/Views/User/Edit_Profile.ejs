@@ -1,0 +1,53 @@
+<% layout('../layouts/mainlayout.ejs') -%>
+
+
+
+<form action="/User/UpdateProfile" method="POST">
+
+ <table>
+    <input type='hidden' name="_id" value= <%= reqInfo._id %> /> <br/>
+       <tr>
+              <td><b>Username: </b></td>
+       
+       <td>
+              <input type='text'  name= "username" 
+              value="<%= reqInfo.username ? reqInfo.username : '' %>"  /><br/>
+       </td>
+
+       </tr>
+
+       <tr>
+              <td><b>First Name: </b></td>
+       <td>
+              <input type='text'  name= "firstName" 
+              value="<%= reqInfo.firstName ? reqInfo.firstName : '' %>"  /><br/>
+       </td>
+       
+       </tr>
+
+       <tr>
+            <td><b>Last Name: </b></td>
+       <td>
+
+              <input type='text'  name= "lastName" 
+              value="<%= reqInfo.lastName ? reqInfo.lastName : '' %>"  /><br/>
+       </td>
+   
+       </tr>
+
+       <tr>
+              <td><b>E-mail: </b></td>
+
+       <td>
+              <input type='text'  name= "email" 
+              value="<%= reqInfo.email ? reqInfo.email : '' %>"  /><br/>
+       </td>
+       
+       </tr>
+    
+
+</table>
+<input type="submit" value="Submit">
+    </form>
+    <%= errorMessage %>
+    

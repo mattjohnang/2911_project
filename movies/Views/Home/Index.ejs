@@ -1,0 +1,28 @@
+<% layout('../layouts/mainlayout.ejs') -%>
+
+
+
+  <table>
+    <% for(var i=0; i < movies.length; i++) { %>
+
+        <tr>
+                    
+          <td><h1> <%= movies[i].movieName %> </h1></td>    
+          
+        </tr>
+
+        <tr>          
+
+            <td><h4 style="margin-left: 150px"><b>Stars: <%= stars[i] ? stars[i] : "No ratings" %></b></h4></td>
+
+
+            <td><a href='/User/Reviews?_id=<%= movies[i]._id %>'>Reviews:</a> <%= revsNum[i] %></td>
+
+
+            <td><a href = '/User/WriteReview?_id=<%= movies[i]._id %>' ><h4 style="margin-left: 150px"><b>Write a Review </b></h4></a></td>
+            
+        </tr>
+     
+    <%}%>
+
+    </table>

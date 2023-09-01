@@ -1,0 +1,16 @@
+<% layout('../layouts/mainlayout.ejs') -%>
+
+<h1>Profile</h1>
+<h3>Username:</h3>
+<%= reqInfo.username %><br>
+
+<h3>First Name:</h3>
+<%= reqInfo.firstName %><br>
+
+<h3>Last Name:</h3>
+<%= reqInfo.lastName %><br>
+
+<h3>Email:</h3>
+<%= reqInfo.email %><br>
+<br>
+<a href='/User/Edit_Profile'>Edit Profile</a>

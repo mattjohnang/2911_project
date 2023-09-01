@@ -1,0 +1,47 @@
+<% layout('../layouts/mainlayout.ejs') -%>
+
+<table>
+  
+   
+    <tr>
+
+        <td>
+            <h3>Rating Out of 5</h3>
+        </td>
+
+        <td>
+            <h1  style="margin-left: 150px"><%= movie.movieName %></h1>
+        </td>
+
+        <td>
+            <h3 style="margin-left: 150px"><a href='/User/WriteReview?_id=<%= movie._id %>'>Write a Review</a></h3>
+        </td>
+    <% for(var i=0; i < reviews.length; i++) { %>
+
+    </tr>
+        <% if (reviews[i].movieName == movie.movieName) { %>
+    <tr>
+        <td>
+           <b style="margin-left: 115px"><%= reviews[i].stars %> </b> 
+        </td>
+
+        <td>
+
+           <b style="margin-left: 150px"><%= reviews[i].review %></b> 
+        </td>
+
+        <td>
+            <b style="margin-left: 150px">Author: <%= reviews[i].username %><br>
+                <b style="margin-left: 150px"><%= reviews[i].date %></b>
+
+        </td>
+       
+
+    </tr>
+    <tr></tr>
+
+
+    <% } %>
+    <% } %>
+
+</table>
